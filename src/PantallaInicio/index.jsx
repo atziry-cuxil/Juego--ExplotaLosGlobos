@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from "react-dom";
+import { EstructuraPantallaInicio } from './EstructuraPantallaInicio';
 
-function PantallaInicio({ children }) {
+function PantallaInicio() {
     return ReactDOM.createPortal(<>
-            {children}
+            <EstructuraPantallaInicio/>
         </>,
         document.querySelector("#pantallaInicio")
     )

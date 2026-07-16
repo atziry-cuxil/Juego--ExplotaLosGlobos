@@ -1,0 +1,200 @@
+/* ==========================
+   ESTILOS GENERALES
+==========================  */
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif;
+}
+
+body {
+
+    background: linear-gradient(#87CEEB, #dff6ff);
+    height: 100vh;
+    overflow: hidden;
+
+} */
+
+/* ==========================
+   CONTENEDOR
+========================== */
+
+.juego {
+
+    width: 95%;
+    max-width: 1200px;
+    height: 95vh;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* ==========================
+   PANEL SUPERIOR
+========================== */
+
+.panel {
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.info {
+
+    flex: 1;
+
+    background: #FFF8E1;
+
+    border: 4px solid #FFD54F;
+
+    border-radius: 20px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+
+}
+
+.info h3 {
+
+    color: #ff6f00;
+    margin-bottom: 10px;
+
+}
+
+.info p {
+
+    font-size: 2rem;
+    color: #ff4081;
+    font-weight: bold;
+
+}
+
+/* ==========================
+   AREA DEL JUEGO
+========================== */
+
+#areaJuego {
+    width: 50rem;
+    height: 50rem;
+
+    flex: 1;
+
+    margin-top: 25px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    border: 6px solid #FFD54F;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, .6) 3px, transparent 4px),
+        radial-gradient(circle at 70% 40%, rgba(255, 255, 255, .5) 4px, transparent 5px),
+        radial-gradient(circle at 40% 70%, rgba(255, 255, 255, .6) 3px, transparent 4px);
+
+}
+
+/* ==========================
+   GLOBOS (ejemplo)
+========================== */
+
+.globo {
+
+    width: 60px;
+    height: 75px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.globo:hover {
+
+    transform: scale(1.1);
+
+}
+
+.globo::after {
+
+    content: "";
+
+    width: 2px;
+    height: 25px;
+
+    background: #555;
+
+    position: absolute;
+
+    bottom: -24px;
+    left: 50%;
+
+}
+
+.rojo {
+
+    background: #ff5252;
+
+}
+
+.verde {
+
+    background: #4CAF50;
+
+}
+
+.azul {
+
+    background: #42A5F5;
+
+}
+
+.negro {
+
+    background: #333;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:700px) {
+
+    .panel {
+
+        flex-direction: column;
+
+    }
+
+    .info p {
+
+        font-size: 1.6rem;
+
+    }
+
+}
+
+#area-globos {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}

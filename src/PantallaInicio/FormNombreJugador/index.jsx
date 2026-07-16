@@ -1,9 +1,9 @@
 import React from 'react';
 import { useContext } from 'react';
-import { ContextoInicio } from '../../ContextoPantallaInicio';
+import { ContextoInicio } from '../../Contexto';
 
 const FormNombreJugador = () => {
-    const { actualizarValores, AccionesFormulario, nombreUsuario, edadUsuario } = React.useContext(ContextoInicio)
+    const { actualizarValores, AccionesFormulario, nombreUsuario } = React.useContext(ContextoInicio)
     return (
         <form className="jugador" onSubmit={() => {
             event.preventDefault()
@@ -19,6 +19,7 @@ const FormNombreJugador = () => {
                     placeholder="Escribe tu nombre"
                     value={nombreUsuario}
                     onChange={actualizarValores}
+                    required
                 />
             </div>
             {/* <div className="campo">

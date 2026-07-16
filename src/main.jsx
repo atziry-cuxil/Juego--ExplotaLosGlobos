@@ -1,10 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ContextoInicio } from './ContextoPantallaInicio/index.jsx'
+import { ContextoPantallaInicio } from './Contexto'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <ContextoPantallaInicio>
       <App />
+    </ContextoPantallaInicio>
   </StrictMode>,
 )

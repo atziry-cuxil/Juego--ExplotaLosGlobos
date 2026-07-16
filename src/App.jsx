@@ -1,24 +1,16 @@
 import React from 'react';
 import { useState } from 'react'
 import { PantallaInicio } from './PantallaInicio';
-import { ContextoPantallaInicio} from './ContextoPantallaInicio';
-import { EstructuraPantallaInicio } from './PantallaInicio/EstructuraPantallaInicio';
-import { ContextoInicio } from './ContextoPantallaInicio';
+import { ContextoInicio } from './Contexto';
 import { PantallaDelJuego } from './PantallaDelJuego';
 
 function App() {
-  //const {estadoPantallaInicio} = React.useContext(ContextoInicio)
+  const { estadoPantallaInicio } = React.useContext(ContextoInicio)
   return (
     <>
-      <ContextoPantallaInicio>
-        <EstructuraPantallaInicio />
-      </ContextoPantallaInicio>
-      {/* <ContextoPantallaInicio>
-        {estadoPantallaInicio && <PantallaInicio >
-          <EstructuraPantallaInicio />
-        </PantallaInicio >}
-      </ContextoPantallaInicio>  */}
-      {/* <PantallaDelJuego/> */}
+        {estadoPantallaInicio && <PantallaInicio />}
+        {!estadoPantallaInicio && <PantallaDelJuego />}
+        {/* //en esta parte uso un estado , despues del tiempo , estadoJuego: false, estadoFinal: true */}
     </>
   )
 }

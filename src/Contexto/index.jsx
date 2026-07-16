@@ -4,7 +4,7 @@ import { useContext } from 'react';
 
 const ContextoInicio = React.createContext()
 
-function ContextoPantallaInicio({children}) {
+function ContextoPantallaInicio({ children }) {
     const [estadoPantallaInicio, setEstadoPantallaInicio] = React.useState(true)
     const [nombreUsuario, setNombre] = React.useState('')
     // const [edadUsuario, setEdad] = React.useState("")
@@ -12,8 +12,10 @@ function ContextoPantallaInicio({children}) {
     function AccionesFormulario(event) {
         event.preventDefault()
         console.log(estadoPantallaInicio)
+        console.log(nombreUsuario)
         console.log('Funcion de boton de inicio')
-        setEstadoPantallaInicio(false)
+        let estadoTemporal = estadoPantallaInicio
+        setEstadoPantallaInicio(!estadoTemporal)
     }
 
     function actualizarValores(event) {
@@ -22,13 +24,18 @@ function ContextoPantallaInicio({children}) {
         // } else {
         //     setEdad(event.target.value)
         // }
-        setNombre(event.target.value)
+        let nombre = event.target.value
+        //setNombre(nombre.trim())
+        if (nombre.trim() != '') {
+            setNombre(nombre)
+        } else {
+            setNombre('')
+        }
     }
     return (
         <ContextoInicio.Provider value={{
             nombreUsuario,
             estadoPantallaInicio,
-            // edadUsuario,
             AccionesFormulario,
             actualizarValores,
         }}>
