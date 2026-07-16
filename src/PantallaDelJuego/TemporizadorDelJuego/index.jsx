@@ -10,7 +10,6 @@ const Temporizador = () => {
         let tiempo = setInterval(() => {
             contador--
             actualizarSegundos(contador)
-            console.log(contador)
             if (contador == 0) {
                 clearInterval(tiempo)
                 actualizarEstadoFinal()

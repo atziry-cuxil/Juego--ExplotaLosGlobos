@@ -3,6 +3,7 @@ import './PantallaDelJuego.css'
 import { ContenedorGlobos } from '../ContenedorGlobos';
 import { Temporizador } from '../TemporizadorDelJuego';
 import { NombreDelJugador } from '../NombreDelJugador';
+import { Puntaje } from '../Puntaje';
 
 const EstructuraDelJuego = () => {
     return (
@@ -10,10 +11,7 @@ const EstructuraDelJuego = () => {
             <header className="panel">
                 <NombreDelJugador />
                 <Temporizador />
-                <div className="info puntaje">
-                    <h3>🏆 Puntaje</h3>
-                    <p id="puntaje">0</p>
-                </div>
+                <Puntaje />
             </header>
             <ContenedorGlobos />
         </div>

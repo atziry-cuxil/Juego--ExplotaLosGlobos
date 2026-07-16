@@ -1,51 +1,55 @@
-.globo{
-    width:60px;
-    height:75px;
-    border-radius:50%;
-    position:relative;
-    cursor:pointer;
-    transition:.2s;
-    box-shadow:inset -8px -10px 15px rgba(0,0,0,.15);
+.globo {
+    width: 60px;
+    height: 75px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: inset -8px -10px 15px rgba(0, 0, 0, .15);
 }
 
-.globo:hover{
-    transform:scale(1.1);
+.globo:hover {
+    transform: scale(1.1);
 }
 
-.globo::before{
-    content:"";
-    position:absolute;
-    width:14px;
-    height:14px;
-    border-radius:50%;
-    background:rgba(255,255,255,.6);
-    top:12px;
-    left:14px;
+.globo::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .6);
+    top: 12px;
+    left: 14px;
 }
 
-.globo::after{
-    content:"";
-    position:absolute;
-    width:2px;
-    height:28px;
-    background:#666;
-    left:50%;
-    bottom:-27px;
-    transform:translateX(-50%);
+.globo::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 28px;
+    background: #666;
+    left: 50%;
+    bottom: -27px;
+    transform: translateX(-50%);
 }
 
-.rojo{
-    background:#ff5252;
+.rojo {
+    background: #ff5252;
 }
 
-.verde{
-    background:#43a047;
+.verde {
+    background: #43a047;
 }
 
-.azul{
-    background:#42a5f5;
+.azul {
+    background: #42a5f5;
 }
 
-.negro{
-    background:#333;
+.negro {
+    background: #333;
+}
+
+.divGlobo {
+    border: 0.1rem black solid;
 }
