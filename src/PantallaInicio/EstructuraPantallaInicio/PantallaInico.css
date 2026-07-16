@@ -73,7 +73,7 @@ h2{
 
     color:#ff6f00;
     margin-bottom:18px;
-r
+
 }
 
 /* ===========================
@@ -273,6 +273,7 @@ input:focus{
     }
 
     .descripcionInicio{
+
         font-size:1rem;
 
     }
