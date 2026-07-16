@@ -5,13 +5,13 @@ import { ContextoInicio } from '../../Contexto';
 const FormNombreJugador = () => {
     const { actualizarValores, AccionesFormulario, nombreUsuario } = React.useContext(ContextoInicio)
     return (
-        <form className="jugador" onSubmit={() => {
+        <form className="jugadorInicio" onSubmit={() => {
             event.preventDefault()
             AccionesFormulario(event)
         }}>
             <h2>👦 Información del Jugador</h2>
 
-            <div className="campo">
+            <div className="campoInicio">
                 <label>Nombre</label>
                 <input
                     name='Nombre'
@@ -32,7 +32,7 @@ const FormNombreJugador = () => {
                     onChange={actualizarValores}
                 />
             </div> */}
-            <button id="btnJugar" type="submit">
+            <button id="btnJugarInicio" type="submit">
                 🎮 ¡Comenzar Juego!
             </button>
         </form>

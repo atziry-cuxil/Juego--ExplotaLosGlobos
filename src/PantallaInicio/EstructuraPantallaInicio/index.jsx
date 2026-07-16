@@ -2,17 +2,17 @@ import { FormNombreJugador } from "../FormNombreJugador";
 import './PantallaInico.css'
 const EstructuraPantallaInicio = () => {
     return (
-        <div className="contenedor">
+        <div className="contenedorInicio">
 
             <h1>🎈 ¡Atrapa Globos! 🎈</h1>
 
-            <p className="descripcion">
+            <p className="descripcionInicio">
                 ¡Haz clic en todos los globos antes de que desaparezcan!
                 Consigue la mayor cantidad de puntos antes de que el tiempo termine.
             </p>
 
             <FormNombreJugador/>
-            <div className="instrucciones">
+            <div className="instruccionesInicio">
                 <h2>📖 Instrucciones</h2>
                 <ul>
                     <li>Haz clic sobre los globos antes de que desaparezcan.</li>
@@ -22,21 +22,21 @@ const EstructuraPantallaInicio = () => {
                     <li>Tienes 30 segundos!!!</li>
                 </ul>
             </div>
-            <div className="puntajes">
+            <div className="puntajesInicio">
                 <h2>🎯 Valor de los Globos</h2>
-                <div className="globo rojo">
+                <div className="globoInicio rojoInicio">
                     <span></span>
                     <p>Globo Rojo <strong>+1 punto</strong></p>
                 </div>
-                <div className="globo verde">
+                <div className="globoInicio verdeInicio">
                     <span></span>
                     <p>Globo Verde <strong>+2 puntos</strong></p>
                 </div>
-                <div className="globo azul">
+                <div className="globoInicio azulInicio">
                     <span></span>
                     <p>Globo Azul <strong>+5 puntos</strong></p>
                 </div>
-                <div className="globo negro">
+                <div className="globoInicio negroInicio">
                     <span></span>
                     <p>Globo Negro <strong>-3 puntos</strong></p>
                 </div>
