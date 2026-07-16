@@ -6,17 +6,10 @@ const ContextoInicio = React.createContext()
 
 function ContextoPantallaInicio({ children }) {
     const [nombreUsuario, setNombre] = React.useState('')
-    // const [edadUsuario, setEdad] = React.useState("")
     const [estadoPantallaInicio, setEstadoPantallaInicio] = React.useState(true)
-    const [estadoReiniciar, setEstadoReiniciar] = React.useState(true)
     const [estadoFinal, setEstadoFinal] = React.useState(false)
-    const [segundos, setsegundos] = React.useState(0)
+    const [segundos, setsegundos] = React.useState(30)
 
-
-    function actualizarEstadoFinal(){
-        let estadoTemporal = estadoFinal
-        setEstadoFinal(!estadoTemporal)
-    }
     function AccionesFormulario(event) {
         event.preventDefault()
         console.log(estadoPantallaInicio)
@@ -27,13 +20,7 @@ function ContextoPantallaInicio({ children }) {
     }
 
     function actualizarValores(event) {
-        // if (Number.isNaN(parseInt(event.target.value))) {
-        //     setNombre(event.target.value)
-        // } else {
-        //     setEdad(event.target.value)
-        // }
         let nombre = event.target.value
-        //setNombre(nombre.trim())
         if (nombre.trim() != '') {
             setNombre(nombre)
         } else {
@@ -41,19 +28,22 @@ function ContextoPantallaInicio({ children }) {
         }
     }
 
-    function actualizarEstadoReiniciar(){
-        let estadoTemporal = estadoReiniciar
-        setEstadoReiniciar(!estadoTemporal)
+    function actualizarEstadoReiniciar() {
+        let estadoTemporal = estadoPantallaInicio
+        setEstadoPantallaInicio(!estadoTemporal)
     }
 
     function actualizarSegundos(value) {
         setsegundos(value)
     }
+    function actualizarEstadoFinal() {
+        let estadoTemporal = estadoFinal
+        setEstadoFinal(!estadoTemporal)
+    }
     return (
         <ContextoInicio.Provider value={{
             nombreUsuario,
             estadoPantallaInicio,
-            estadoReiniciar,
             segundos,
             estadoFinal,
             actualizarEstadoFinal,

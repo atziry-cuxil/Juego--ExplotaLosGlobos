@@ -6,12 +6,12 @@ const Temporizador = () => {
     const {estadoReiniciar, segundos, actualizarSegundos, actualizarEstadoFinal} = React.useContext(ContextoInicio)
 
     React.useEffect(() => {
-        let contador = 0
+        let contador = 30
         let tiempo = setInterval(() => {
-            contador++
+            contador--
             actualizarSegundos(contador)
             console.log(contador)
-            if (contador == 30) {
+            if (contador == 0) {
                 clearInterval(tiempo)
                 actualizarEstadoFinal()
             }
