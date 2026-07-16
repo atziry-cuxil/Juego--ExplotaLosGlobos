@@ -2,12 +2,13 @@ import React from 'react';
 import { ContextoInicio } from "../../Contexto";
 
 const BotonReiniciar = () => {
-    const {actualizarEstadoReiniciar, actualizarEstadoFinal} = React.useContext(ContextoInicio)
+    const {actualizarEstadoReiniciar, actualizarEstadoFinal, reiniciarContadores} = React.useContext(ContextoInicio)
     return (
         <button className="btn"
         onClick={() => {
             actualizarEstadoReiniciar()
             actualizarEstadoFinal()
+            reiniciarContadores()
         }}
         >
             🎮 Volver a Jugar

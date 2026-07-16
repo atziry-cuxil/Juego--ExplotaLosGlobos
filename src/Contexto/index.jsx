@@ -23,7 +23,7 @@ function ContextoPantallaInicio({ children }) {
             positivos++
         } else if (event.target.dataset.id == 'rojo') {
             operacion = operacion + 1
-            negativos++
+            positivos++
         } else if (event.target.dataset.id == 'azul') {
             operacion = operacion + 5
             positivos++
@@ -34,8 +34,6 @@ function ContextoPantallaInicio({ children }) {
         setContadorPuntos(operacion)
         setNegativos(negativos)
         setPositivos(positivos)
-        console.log(positivos + "positivos")
-        console.log(negativos + "negativos")
         //console.log(event.target.dataset.id)
         //console.log(event.target)
 
@@ -67,19 +65,27 @@ function ContextoPantallaInicio({ children }) {
     function actualizarSegundos(value) {
         setsegundos(value)
     }
+
     function actualizarEstadoFinal() {
         let estadoTemporal = estadoFinal
         setEstadoFinal(!estadoTemporal)
     }
+
+    function reiniciarContadores() {
+        setContadorPuntos(0)
+        setPositivos(0)
+        setNegativos(0)
+    }
     return (
         <ContextoInicio.Provider value={{
-            contadorPositivos, 
+            contadorPositivos,
             contadorNegativos,
             nombreUsuario,
             estadoPantallaInicio,
             segundos,
             estadoFinal,
             contadorPuntos,
+            reiniciarContadores,
             actualizarPuntaje,
             actualizarEstadoFinal,
             actualizarSegundos,
