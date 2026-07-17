@@ -3,19 +3,19 @@ import { useState } from 'react';
 import { ContextoInicio } from '../../Contexto' 
 
 const Temporizador = () => {
-    const {estadoReiniciar, segundos, actualizarSegundos, actualizarEstadoFinal} = React.useContext(ContextoInicio)
+    const {estadoFinal, segundos, actualizarSegundos, actualizarEstadoFinal} = React.useContext(ContextoInicio)
 
     React.useEffect(() => {
-        let contador = 10
+        let contador = 30
         let tiempo = setInterval(() => {
             contador--
             actualizarSegundos(contador)
             if (contador == 0) {
                 clearInterval(tiempo)
-                //actualizarEstadoFinal()
+                actualizarEstadoFinal()
             }
         }, 1000)
-    }, [estadoReiniciar] )
+    }, [estadoFinal] )
 
     return (
         <div className="info tiempo">
