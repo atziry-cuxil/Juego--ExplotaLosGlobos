@@ -7,15 +7,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif;
-}
+} 
 
 body {
 
     background: linear-gradient(#87CEEB, #dff6ff);
     height: 100vh;
     overflow: hidden;
-
-} */
+}*/
 
 /* ==========================
    CONTENEDOR
@@ -23,14 +22,15 @@ body {
 
 .juego {
 
-    width: 95%;
+    width: 97%;
     max-width: 1200px;
-    height: 95vh;
+    height: auto;
 
     margin: auto;
 
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
 }
 
@@ -40,7 +40,7 @@ body {
 
 .panel {
 
-    margin-top: 20px;
+    margin-top: 10px;
 
     display: flex;
     justify-content: space-between;
@@ -86,8 +86,8 @@ body {
 ========================== */
 
 #areaJuego {
-    width: 50rem;
-    height: 50rem;
+    width: auto;
+    height: auto;
 
     flex: 1;
 
@@ -118,8 +118,8 @@ body {
 
 .globo {
 
-    width: 60px;
-    height: 75px;
+    width: 50px;
+    height: 65px;
     border-radius: 50%;
     position: relative;
     cursor: pointer;
@@ -193,12 +193,10 @@ body {
 }
 
 #area-globos {
+    /* width: 50rem;
+    height: 65rem; */
     display: grid;
-    gap: 0.5rem;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    gap: 0.1rem;
+    grid-template-columns: repeat(8, 4.5rem);
+    grid-template-rows: repeat(6, 6.5rem);
 }
-
-/* .d-none {
-    display: none;
-} */

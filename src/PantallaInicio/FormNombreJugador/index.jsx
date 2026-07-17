@@ -22,16 +22,6 @@ const FormNombreJugador = () => {
                     required
                 />
             </div>
-            {/* <div className="campo">
-                <label>Edad</label>
-                <input
-                    name='Edad'
-                    type="number"
-                    placeholder="Edad"
-                    value={nombreUsuario}
-                    onChange={actualizarValores}
-                />
-            </div> */}
             <button id="btnJugarInicio" type="submit">
                 🎮 ¡Comenzar Juego!
             </button>

@@ -7,14 +7,15 @@ import { Puntaje } from '../Puntaje';
 
 const EstructuraDelJuego = () => {
     return (
-        <div className="juego">
-            <header className="panel">
-                <NombreDelJugador />
-                <Temporizador />
-                <Puntaje />
-            </header>
-            <ContenedorGlobos />
-        </div>
+            <div className="juego">
+                <header className="panel">
+                    <NombreDelJugador />
+                    <Temporizador />
+                    <Puntaje />
+                </header>
+                <ContenedorGlobos />
+            </div>
+
     );
 }
 

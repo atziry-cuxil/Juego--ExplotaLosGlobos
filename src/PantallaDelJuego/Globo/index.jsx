@@ -4,8 +4,8 @@ import { ContextoInicio } from '../../Contexto';
 const Globo = ({ color, id }) => {
     const {actualizarPuntaje, UnClick} = React.useContext(ContextoInicio)
     return (
-        <div className="divGlobo">
-            <div className={`globo ${color} d-none`}
+        <div className='divGlobo'>
+            <div className={`globo ${color}`}
                 data-id={color}
                 id={id}
                 onClick={(event) => {
