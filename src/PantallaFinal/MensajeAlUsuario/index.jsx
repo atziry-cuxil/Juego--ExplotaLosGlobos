@@ -23,8 +23,4 @@ const MensajeAlUsuario = () => {
     );
 }
 
-// • Menos de 0 puntos: “¡Cuidado con los globos negros!”
-// • De 0 a 10 puntos: “¡Buen intento!”
-// • De 11 a 25 puntos: “¡Muy bien!”
-// • Más de 25 puntos: “¡Eres un maestro explotando globos!”
 export { MensajeAlUsuario }

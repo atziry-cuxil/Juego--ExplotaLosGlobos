@@ -1,8 +1,6 @@
 const GloboInvisible = () => {
-
     return (
-        <div className="divGlobo">
-        </div>
+        <div className="divGlobo"></div>
     );
 }
 

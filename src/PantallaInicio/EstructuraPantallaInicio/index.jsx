@@ -4,7 +4,7 @@ const EstructuraPantallaInicio = () => {
     return (
         <div className="contenedorInicio">
 
-            <h1>🎈 ¡Atrapa Globos! 🎈</h1>
+            <h1>🎈 ¡Explota los Globos! 🎈</h1>
 
             <p className="descripcionInicio">
                 ¡Haz clic en todos los globos antes de que desaparezcan!

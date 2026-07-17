@@ -14,7 +14,6 @@ body{
     justify-content:center;
     align-items:center;
     padding:40px;
-
 }
 
 .contenedor{
@@ -23,13 +22,9 @@ body{
     background:#fff;
     border:5px solid #FFC93C;
     border-radius:30px;
-
     padding:40px;
-
     text-align:center;
-
     box-shadow:0 15px 30px rgba(0,0,0,.2);
-
 }
 
 h1{
@@ -37,7 +32,6 @@ h1{
     color:#ff3d7f;
     font-size:50px;
     margin-bottom:15px;
-
     text-shadow:3px 3px #ffd24c;
 
 }
@@ -55,7 +49,6 @@ h1{
     display:flex;
     justify-content:center;
     gap:30px;
-
     margin-bottom:35px;
 
 }
@@ -63,15 +56,10 @@ h1{
 .card{
 
     width:280px;
-
     background:#fff8e8;
-
     border:4px solid #FFC93C;
-
     border-radius:20px;
-
     padding:20px;
-
     box-shadow:0 8px 20px rgba(0,0,0,.15);
 
 }
@@ -95,13 +83,9 @@ h1{
 .estadisticas{
 
     background:#fff8e8;
-
     border:4px solid #FFC93C;
-
     border-radius:25px;
-
     padding:30px;
-
     margin-bottom:30px;
 
 }
@@ -118,11 +102,8 @@ h1{
 
     display:flex;
     justify-content:space-between;
-
     padding:18px;
-
     font-size:25px;
-
     border-bottom:2px dashed #ddd;
 
 }
@@ -154,13 +135,9 @@ h1{
 .mensaje{
 
     background:#fff8e8;
-
     border:4px solid #FFC93C;
-
     border-radius:25px;
-
     padding:30px;
-
     margin-bottom:35px;
 
 }
@@ -185,23 +162,14 @@ h1{
 
     width:100%;
     padding:22px;
-
     background:#59b85a;
-
     color:white;
-
     border:none;
-
     border-radius:18px;
-
     font-size:30px;
-
     font-weight:bold;
-
     cursor:pointer;
-
     transition:.3s;
-
     box-shadow:0 8px 18px rgba(0,0,0,.2);
 
 }

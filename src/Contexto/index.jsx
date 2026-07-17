@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
-import { flushSync } from 'react-dom';
 
 const ContextoInicio = React.createContext()
 
@@ -71,12 +70,23 @@ function ContextoPantallaInicio({ children }) {
         let indice3 = Math.ceil(Math.random() * 48)
         let indice4 = Math.ceil(Math.random() * 48)
         let indice5 = Math.ceil(Math.random() * 48)
+        let indice9 = Math.ceil(Math.random() * 48)
+        let indices = [indice1, indice2, indice3, indice4, indice5]
 
         let temporal = [...globos]
         temporal = temporal.map(globo => (
             globo.id == indice1 || globo.id == indice2 || globo.id == indice3 || globo.id == indice4 || globo.id == indice5
                 ? { ...globo, estado: !globo.estado } : globo
         ))
+
+        if (indices.every(indice => indice != indice9)) {
+            setTimeout(() => {
+                temporal = temporal.map(globo => (
+                    globo.id == indice9 ? { ...globo, estado: !globo.estado } : globo
+                ))
+                setGlobos(temporal)
+            }, 1000)
+        }
 
         setGlobos(temporal)
         let contador = 0
@@ -95,6 +105,8 @@ function ContextoPantallaInicio({ children }) {
             let temporal = [...globos]
             temporal = temporal.map(globo => ({ ...globo, estado: false }))
             contador += 4
+
+
             temporal = temporal.map(globo => (
                 globo.id == indice1 || globo.id == indice2 || globo.id == indice3 || globo.id == indice4 || globo.id ==
                     indice5 || globo.id == indice6 || globo.id == indice7 || globo.id == indice8 ? { ...globo, estado: !globo.estado } : globo
@@ -103,7 +115,7 @@ function ContextoPantallaInicio({ children }) {
             if (indices.every(indice => indice != indice9)) {
                 setTimeout(() => {
                     temporal = temporal.map(globo => (
-                        globo.id == indice9  || globo.id == indice1 ? { ...globo, estado: !globo.estado } : globo
+                        globo.id == indice9 || globo.id == indice1 ? { ...globo, estado: !globo.estado } : globo
                     ))
                     setGlobos(temporal)
                 }, 1000)
@@ -139,6 +151,15 @@ function ContextoPantallaInicio({ children }) {
         setPositivos(positivos)
     }
 
+    function actualizarEstadoFinal() {
+        let estadoTemporal = estadoFinal
+        setsegundos(30)
+        setEstadoFinal(!estadoTemporal)
+        let globosTemporales = [...globos]
+        globosTemporal = globosTemporales.map(globo => ({ ...globo, estado: false }))
+        setGlobos(globosTemporal)
+    }
+
     function actualizarValores(event) {
         let nombre = event.target.value
         if (nombre.trim() != '') {
@@ -152,9 +173,6 @@ function ContextoPantallaInicio({ children }) {
         event.preventDefault()
         let estadoTemporal = estadoPantallaInicio
         setEstadoPantallaInicio(!estadoTemporal)
-        let globosTemporal = [...globos]
-        globosTemporal = globosTemporal.map(globo => ({ ...globo, estado: false }))
-        setGlobos(globosTemporal)
         PintarGlobosAleatoreos()
     }
 
@@ -174,11 +192,6 @@ function ContextoPantallaInicio({ children }) {
     function actualizarEstadoReiniciar() {
         let estadoTemporal = estadoPantallaInicio
         setEstadoPantallaInicio(!estadoTemporal)
-    }
-
-    function actualizarEstadoFinal() {
-        let estadoTemporal = estadoFinal
-        setEstadoFinal(!estadoTemporal)
     }
 
     function actualizarSegundos(value) {

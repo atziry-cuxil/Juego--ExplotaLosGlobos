@@ -1,22 +1,4 @@
 /* ==========================
-   ESTILOS GENERALES
-==========================  */
-/* 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif;
-} 
-
-body {
-
-    background: linear-gradient(#87CEEB, #dff6ff);
-    height: 100vh;
-    overflow: hidden;
-}*/
-
-/* ==========================
    CONTENEDOR
 ========================== */
 
@@ -193,8 +175,6 @@ body {
 }
 
 #area-globos {
-    /* width: 50rem;
-    height: 65rem; */
     display: grid;
     gap: 0.1rem;
     grid-template-columns: repeat(8, 4.5rem);

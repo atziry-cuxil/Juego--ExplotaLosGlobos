@@ -15,7 +15,6 @@ const EstructuraDelJuego = () => {
                 </header>
                 <ContenedorGlobos />
             </div>
-
     );
 }
 
