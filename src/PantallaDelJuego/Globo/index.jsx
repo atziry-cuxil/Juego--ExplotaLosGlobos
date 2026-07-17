@@ -5,7 +5,7 @@ const Globo = ({ color, id }) => {
     const {actualizarPuntaje} = React.useContext(ContextoInicio)
     return (
         <div className="divGlobo">
-            <div className={`globo ${color}`}
+            <div className={`globo ${color} d-none`}
                 data-id={color}
                 id={id}
                 onClick={(event) => actualizarPuntaje(event)}

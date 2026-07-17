@@ -12,7 +12,7 @@ const Temporizador = () => {
             actualizarSegundos(contador)
             if (contador == 0) {
                 clearInterval(tiempo)
-                actualizarEstadoFinal()
+                //actualizarEstadoFinal()
             }
         }, 1000)
     }, [estadoReiniciar] )

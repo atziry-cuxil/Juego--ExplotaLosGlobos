@@ -55,7 +55,16 @@ const ContenedorGlobos = () => {
         { id: 48, color: 'azul' },
         { id: 49, color: 'negro' },
         { id: 50, color: 'verde' },
-
+        { id: 51, color: 'negro' },
+        { id: 52, color: 'verde' },
+        { id: 53, color: 'rojo' },
+        { id: 54, color: 'azul' },
+        { id: 55, color: 'negro' },
+        { id: 56, color: 'verde' },
+        { id: 57, color: 'rojo' },
+        { id: 58, color: 'azul' },
+        { id: 59, color: 'negro' },
+        { id: 60, color: 'verde' },
     ]
     return (
         <section id="areaJuego">
@@ -150,6 +159,7 @@ const ContenedorGlobos = () => {
                 <div className="globo verde"></div>
                 <div className="globo negro"></div> */}
             </div>
+
         </section>
     );
 }
