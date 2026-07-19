@@ -2,54 +2,61 @@
    ESTILOS GENERALES
 =========================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Comic Sans MS', 'Trebuchet MS', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif;
 }
 
-body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(180deg,#5ae7aa,#dff6ff);
-    padding:30px;
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #5ae7aa, #dff6ff);
+    padding: clamp(12px, 3vw, 30px);
+    overflow-x: hidden;
 }
 
 /* ===========================
    CONTENEDOR PRINCIPAL
 =========================== */
 
-.contenedorInicio{
-    width:900px;
-    max-width:95%;
-    background:white;
-    border-radius:25px;
-    padding:35px;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
-    border:6px solid #FFD54F;
+.contenedorInicio {
+    width: min(900px, 100%);
+    max-width: 100%;
+    background: white;
+    border-radius: 25px;
+    padding: clamp(20px, 4vw, 35px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    border: 6px solid #FFD54F;
 }
 
 /* ===========================
    TITULO
 =========================== */
 
-h1{
-    text-align:center;
-    color:#ff4081;
-    font-size:3rem;
-    margin-bottom:15px;
-    text-shadow:3px 3px 0 #ffe082;
+h1 {
+    text-align: center;
+    color: #ff4081;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 0 #ffe082;
 }
 
-.descripcionInicio{
-    text-align:center;
-    font-size:1.2rem;
-    color:#555;
-    margin-bottom:30px;
-    line-height:1.6;
+.descripcionInicio {
+    text-align: center;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 /* ===========================
@@ -58,224 +65,210 @@ h1{
 
 .jugadorInicio,
 .instruccionesInicio,
-.puntajesInicio{
-
-    background:#fff8e1;
-    border-radius:20px;
-    padding:20px;
-    margin-bottom:25px;
-    border:3px solid #FFD54F;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-
+.puntajesInicio {
+    background: #fff8e1;
+    border-radius: 20px;
+    padding: clamp(16px, 3vw, 20px);
+    margin-bottom: 25px;
+    border: 3px solid #FFD54F;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
 }
 
-h2{
-
-    color:#ff6f00;
-    margin-bottom:18px;
-
+h2 {
+    color: #ff6f00;
+    margin-bottom: 18px;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 /* ===========================
    FORMULARIO
 =========================== */
 
-.campoInicio{
-
-    display:flex;
-    flex-direction:column;
-    margin-bottom:15px;
-
+.campoInicio {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 }
 
-label{
-
-    margin-bottom:6px;
-    font-weight:bold;
-    color:#444;
-
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+    font-size: clamp(0.95rem, 2vw, 1rem);
 }
 
-input{
-
-    padding:12px;
-    border:none;
-    border-radius:12px;
-    background:#f5f5f5;
-    font-size:1rem;
-    outline:none;
-    transition:.3s;
-
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 12px;
+    background: #f5f5f5;
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    outline: none;
+    transition: .3s;
 }
 
-input:focus{
-
-    background:white;
-    box-shadow:0 0 0 3px #81d4fa;
-
+input:focus {
+    background: white;
+    box-shadow: 0 0 0 3px #81d4fa;
 }
 
 /* ===========================
    LISTA
 =========================== */
 
-.instruccionesInicio ul{
-
-    padding-left:25px;
-
+.instruccionesInicio ul {
+    padding-left: 20px;
 }
 
-.instruccionesInicio li{
-
-    margin-bottom:10px;
-    color:#444;
-    font-size:1.05rem;
-
+.instruccionesInicio li {
+    margin-bottom: 10px;
+    color: #444;
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
 }
 
 /* ===========================
    GLOBOS
 =========================== */
 
-.globoInicio{
-
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin:12px 0;
-
+.globoInicio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 12px 0;
+    flex-wrap: wrap;
 }
 
-.globoInicio span{
-
-    width:35px;
-    height:45px;
-    border-radius:50%;
-    display:block;
-    position:relative;
-
+.globoInicio span {
+    width: 35px;
+    height: 45px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    flex-shrink: 0;
 }
 
 /* piquito */
 
-.globoInicio span::after{
-
-    content:"";
-    position:absolute;
-    bottom:-8px;
-    left:50%;
-    width:2px;
-    height:18px;
-    background:#666;
-    transform:translateX(-50%);
-
+.globoInicio span::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 2px;
+    height: 18px;
+    background: #666;
+    transform: translateX(-50%);
 }
 
-.rojoInicio span{
-
-    background:#ff5252;
-
+.rojoInicio span {
+    background: #ff5252;
 }
 
-.verdeInicio span{
-
-    background:#43a047;
-
+.verdeInicio span {
+    background: #43a047;
 }
 
-.azulInicio span{
-
-    background:#42a5f5;
-
+.azulInicio span {
+    background: #42a5f5;
 }
 
-.negroInicio span{
-
-    background:#333;
-
+.negroInicio span {
+    background: #333;
 }
 
-.globoInicio p{
-
-    color:#444;
-    font-size:1.05rem;
-
+.globoInicio p {
+    color: #444;
+    font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+    word-break: break-word;
 }
 
-.globoInicio strong{
-
-    color:#ff4081;
-
+.globoInicio strong {
+    color: #ff4081;
 }
 
 /* ===========================
    BOTON
 =========================== */
 
-#btnJugarInicio{
-
-    width:100%;
-    padding:18px;
-    margin-top:15px;
-
-    border:none;
-    border-radius:18px;
-
-    background:linear-gradient(45deg,#4CAF50,#81C784);
-
-    color:white;
-    font-size:1.4rem;
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-    box-shadow:0 6px 15px rgba(0,0,0,.2);
-
+#btnJugarInicio {
+    width: 100%;
+    padding: clamp(14px, 3vw, 18px);
+    margin-top: 15px;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(45deg, #4CAF50, #81C784);
+    color: white;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .2);
 }
 
-#btnJugarInicio:hover{
-
-    transform:scale(1.04);
-    background:linear-gradient(45deg,#43A047,#66BB6A);
-
+#btnJugarInicio:hover {
+    transform: scale(1.04);
+    background: linear-gradient(45deg, #43A047, #66BB6A);
 }
 
-#btnJugarInicio:active{
-
-    transform:scale(.98);
-
+#btnJugarInicio:active {
+    transform: scale(.98);
 }
 
 /* ===========================
    RESPONSIVE
 =========================== */
 
-@media(max-width:700px){
-
-    .contenedorInicio{
-
-        padding:20px;
-
+@media (max-width: 700px) {
+    .contenedorInicio {
+        padding: 20px;
     }
 
-    h1{
-
-        font-size:2.2rem;
-
+    h1 {
+        font-size: 2.1rem;
     }
 
-    h2{
-
-        font-size:1.3rem;
-
+    h2 {
+        font-size: 1.3rem;
     }
 
-    .descripcionInicio{
-
-        font-size:1rem;
-
+    .descripcionInicio {
+        font-size: 1rem;
     }
 
+    .globoInicio {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .contenedorInicio {
+        padding: 16px;
+        border-width: 4px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .descripcionInicio {
+        margin-bottom: 20px;
+    }
+
+    .jugadorInicio,
+    .instruccionesInicio,
+    .puntajesInicio {
+        padding: 14px;
+    }
+
+    #btnJugarInicio {
+        padding: 13px;
+    }
 }

@@ -1,56 +1,73 @@
 .globo {
-    width: 50px;
-    height: 65px;
-    border-radius: 50%;
+    width: clamp(2.6rem, 4.8vw, 3.6rem);
+    height: clamp(3.3rem, 6vw, 4.5rem);
+    border-radius: 50% 50% 46% 46%;
     position: relative;
     cursor: pointer;
-    transition: .2s;
-    box-shadow: inset -8px -10px 15px rgba(0, 0, 0, .15);
+    transition: filter .2s ease, box-shadow .2s ease;
+    box-shadow:
+        inset -8px -10px 16px rgba(0, 0, 0, .18),
+        inset 6px 6px 12px rgba(255, 255, 255, .24),
+        0 8px 14px rgba(0, 0, 0, .14);
+    overflow: visible;
+    border: 2px solid rgba(255, 255, 255, .25);
+    will-change: transform;
+    transform-origin: center bottom;
+    animation: flotarGlobo 3.4s ease-in-out infinite;
 }
 
 .globo:hover {
-    transform: scale(1.1);
+    filter: brightness(1.08) saturate(1.08);
 }
 
 .globo::before {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 35%;
+    height: 30%;
     border-radius: 50%;
-    background: rgba(255, 255, 255, .6);
-    top: 12px;
-    left: 14px;
+    background: rgba(255, 255, 255, .35);
+    top: 12%;
+    left: 18%;
+    filter: blur(1px);
 }
 
 .globo::after {
     content: "";
     position: absolute;
-    width: 2px;
-    height: 28px;
-    background: #666;
+    width: 2.2px;
+    height: clamp(1.1rem, 2.2vw, 1.45rem);
+    background: linear-gradient(180deg, #8b5e3c, #4a2f1b);
     left: 50%;
-    bottom: -27px;
+    bottom: -1.1rem;
     transform: translateX(-50%);
+    border-radius: 999px;
 }
 
 .rojo {
-    background: #ff5252;
+    background: linear-gradient(145deg, #ff7a7a 0%, #ff5252 45%, #c61818 100%);
 }
 
 .verde {
-    background: #43a047;
+    background: linear-gradient(145deg, #6edb78 0%, #43a047 45%, #1e6f24 100%);
 }
 
 .azul {
-    background: #42a5f5;
+    background: linear-gradient(145deg, #7fbfff 0%, #42a5f5 45%, #1565c0 100%);
 }
 
 .negro {
-    background: #333;
+    background: linear-gradient(145deg, #6e6e6e 0%, #333 45%, #111 100%);
 }
 
 .divGlobo {
-    border: 0.1rem rgb(255, 207, 130) solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: none;
     text-align: center;
+    padding: 0.2rem;
+    background: transparent;
 }

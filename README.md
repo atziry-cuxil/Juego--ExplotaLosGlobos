@@ -48,13 +48,13 @@ Al finalizar el tiempo, el juego muestra el puntaje obtenido y las estadísticas
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/atziry-cuxil/Juego--ExplotaLosGlobos
+git clone git@github.com:atziry-cuxil/Juego--ExplotaLosGlobos.git
 ```
 
 ### 2. Entrar a la carpeta del proyecto
 
 ```bash
-cd explota-los-globos
+cd Juego--explotaLosGlobos
 ```
 
 ### 3. Instalar dependencias
