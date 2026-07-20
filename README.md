@@ -43,6 +43,14 @@ Al finalizar el tiempo, el juego muestra el puntaje obtenido y las estadísticas
 
 ---
 
+## gh-pages
+
+Puedes verlo en el siguiente link:
+
+```
+https://atziry-cuxil.github.io/Juego--ExplotaLosGlobos/
+```
+
 ## Instrucciones para ejecutar el proyecto
 
 ### 1. Clonar el repositorio
