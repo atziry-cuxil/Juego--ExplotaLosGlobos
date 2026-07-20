@@ -156,8 +156,8 @@ function ContextoPantallaInicio({ children }) {
         setsegundos(30)
         setEstadoFinal(!estadoTemporal)
         let globosTemporales = [...globos]
-        globosTemporal = globosTemporales.map(globo => ({ ...globo, estado: false }))
-        setGlobos(globosTemporal)
+        globosTemporales = globosTemporales.map(globo => ({ ...globo, estado: false }))
+        setGlobos(globosTemporales)
     }
 
     function actualizarValores(event) {
